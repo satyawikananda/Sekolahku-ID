@@ -3,5 +3,9 @@
     <div class="d-flex align-center">
       <h5 class="title display-1 centered">SekolahKu ID</h5>
     </div>
+    <v-spacer></v-spacer>
+    <v-btn class="pa-2" text icon>
+      <v-icon>mdi-cog-outline</v-icon>
+    </v-btn>
   </v-app-bar>
 </template>
