@@ -1,5 +1,7 @@
 # sekolahku
 
+![Pipeline status](https://gitlab.com/satyawikananda/sekolah-ku/badges/master/pipeline.svg)
+
 ## Project setup
 ```
 npm install
