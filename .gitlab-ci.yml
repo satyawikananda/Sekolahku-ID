@@ -1,0 +1,9 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+test_async:
+  script:
+    - npm install
