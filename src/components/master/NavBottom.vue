@@ -1,18 +1,18 @@
 <template>
-  <v-bottom-navigation :value="activeBtn" color="primary" horizontal>
+  <v-bottom-navigation :value="activeBtn" color="primary" grow fixed>
     <v-btn>
-      <span>Recents</span>
-      <v-icon>mdi-history</v-icon>
-    </v-btn>
-
-    <v-btn>
-      <span>Favorites</span>
+      <span>Favorite</span>
       <v-icon>mdi-heart</v-icon>
     </v-btn>
 
     <v-btn>
-      <span>Nearby</span>
-      <v-icon>mdi-map-marker</v-icon>
+      <span>Home</span>
+      <v-icon>mdi-home-circle</v-icon>
+    </v-btn>
+
+    <v-btn>
+      <span>About</span>
+      <v-icon>mdi-alert-circle</v-icon>
     </v-btn>
   </v-bottom-navigation>
 </template>
