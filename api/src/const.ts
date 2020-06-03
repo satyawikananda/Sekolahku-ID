@@ -1,0 +1,1 @@
+export const baseUrl: string = "http://jendela.data.kemdikbud.go.id/api/index.php/"
