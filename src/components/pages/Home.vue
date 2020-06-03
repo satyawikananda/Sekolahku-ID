@@ -1,5 +1,5 @@
 <template>
-  <v-layout column align-center justify-center class="ma-5 pa-5">
+  <v-layout column align-center justify-center class="ma-5 pb-5">
     <v-img
       alt="Sekolah ku logo"
       class="shrink mt-5 hero-img"
