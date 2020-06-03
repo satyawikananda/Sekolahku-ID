@@ -1,16 +1,16 @@
 <template>
   <v-bottom-navigation :value="activeBtn" color="primary" grow fixed>
-    <v-btn>
+    <v-btn to="/favorite">
       <span>Favorit</span>
       <v-icon>mdi-heart</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn to="/">
       <span>Beranda</span>
       <v-icon>mdi-home-circle</v-icon>
     </v-btn>
 
-    <v-btn>
+    <v-btn to="/about">
       <span>Tentang</span>
       <v-icon>mdi-alert-circle</v-icon>
     </v-btn>

@@ -28,6 +28,7 @@
 </style>
 <script>
 export default {
+  name: "Homepage",
   data() {
     return {
       home: {
