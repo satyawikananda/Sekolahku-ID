@@ -10,7 +10,7 @@
     "tsc": "tsc",
     "build": "npm-run-all clean lint tsc copy-assets",
     "dev:start": "npm-run-all build start",
-    "dev": "nodemon --watch src -e ts,ejs --exec yarn dev:start",
+    "dev": "nodemon --watch src -e ts --exec yarn dev:start",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
