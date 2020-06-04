@@ -9,10 +9,8 @@
     />
     <h3
       class="red--text text--darken-2 text-center mt-3 pa-3 title font-weight-reguler"
-    >
-      {{ home.title }}
-    </h3>
-    <v-btn large color="secondary">
+    >{{ home.title }}</h3>
+    <v-btn large color="secondary" to="search/sekolah">
       {{ home.button }}
       <v-icon class="ml-2">mdi-magnify</v-icon>
     </v-btn>
