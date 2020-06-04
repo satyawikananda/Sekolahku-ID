@@ -28,6 +28,22 @@ app.get("/api/wilayah", (req, res): void => {
     })
 })
 
+app.get("/api/sekolah", (req, res): void => {
+    const kodeWilayah: any = req.query.kode_wilayah
+    const bentuk: any = req.query.bentuk
+    res.setHeader("Cache-Control", "public,max-age=3600,s-maxage=30");
+    setImmediate(():void => {
+        try{
+            Sekolah.sekolah(kodeWilayah, bentuk)
+             .then((data: any):void => {
+                 res.send(data)
+             })
+        }catch(err){
+            res.status(400).send("Something went wrong")
+        }
+    })
+})
+
 app.listen(port, ():void => {
     console.log(`Server listen on port: ${port}`)
 })
