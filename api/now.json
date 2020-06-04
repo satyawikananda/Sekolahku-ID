@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "name": "api-sekolahku",
+    "github": {
+        "enabled": false
+    },
+    "builds": [
+        {
+          "src": "/dist/server.js",
+          "use": "@now/node-server"
+        }
+      ],
+    "routes": [
+        {
+          "src": "/.*",
+          "dest": "/dist/server.js",
+          "methods": ["GET"]
+        }
+    ]
+}
