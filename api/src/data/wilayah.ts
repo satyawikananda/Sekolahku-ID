@@ -26,6 +26,7 @@ export const wilayah: any = () => {
                     code: response.status,
                     msg: "Failed"
                 }
+                resolve(error)
             }
          })
          .catch((error: any):void =>{
