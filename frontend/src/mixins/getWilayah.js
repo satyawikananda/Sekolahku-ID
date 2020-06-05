@@ -10,11 +10,9 @@ export const getWilayah = {
       try {
         const { data } = await this.$http.request({
           method: "GET",
-          url: `${baseUrl}api/wilayah`,
+          url: `${baseUrl}wilayah`,
         });
-        data.data.forEach((res) => {
-          this.wilayah.push(res.nama);
-        });
+        this.wilayah = data.data
       } catch (err) {
         throw new err();
       }
