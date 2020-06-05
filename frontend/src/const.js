@@ -1,1 +1,1 @@
-export const baseUrl = `https://api-sekolahku.now.sh/`;
+export const baseUrl = `https://api-sekolahku.now.sh/api/`;
