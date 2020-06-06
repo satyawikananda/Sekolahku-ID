@@ -23,6 +23,7 @@
     "typescript": "^3.9.3"
   },
   "devDependencies": {
+    "@now/node": "^1.6.1",
     "@types/axios": "^0.14.0",
     "@types/cors": "^2.8.6",
     "@types/dotenv": "^8.2.0",
