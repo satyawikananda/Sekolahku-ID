@@ -73,11 +73,13 @@
               :sekolah="data.sekolah"
               :npsn="data.npsn"
               :bentuk="data.bentuk"
-              :status="data.status == 'n' ? 'Negeri' : 'Swasta'"
+              :status="data.status === 'N' ? 'Negeri' : 'Swasta'"
               :alamat="data.alamat_jalan"
               :provinsi="data.propinsi"
               :kab="data.kabupaten_kota"
               :kec="data.kecamatan"
+              :lat="data.lintang"
+              :lng="data.bujur"
             />
           </v-expansion-panel>
         </v-expansion-panels>

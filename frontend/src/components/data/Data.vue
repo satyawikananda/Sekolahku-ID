@@ -44,12 +44,19 @@
           <v-list-item-subtitle>{{ kec }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <v-btn color="secondary" class="ma-2 white--text">
+      <v-btn disabled color="secondary" class="ma-2 white--text">
         Pin
-        <v-icon right dark>mdi-heart-outline</v-icon>
+        <v-icon right dark>mdi-pin</v-icon>
       </v-btn>
-      <v-btn color="secondary" class="ma-2 white--text">
-        Lihat lokasi
+      <v-btn
+        color="secondary"
+        class="ma-2 white--text"
+        :href="
+          'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng
+        "
+        :title="sekolah"
+      >
+        Cari alamat
         <v-icon right dark>mdi-map</v-icon>
       </v-btn>
     </v-expansion-panel-content>
@@ -65,12 +72,9 @@ export default {
     "alamat",
     "provinsi",
     "kab",
-    "kec"
-  ],
-  data() {
-    return {
-      like: false
-    };
-  }
+    "kec",
+    "lat",
+    "lng"
+  ]
 };
 </script>
