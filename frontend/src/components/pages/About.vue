@@ -14,10 +14,16 @@
       {{ about.title }}
     </h3>
     <span
-      class="mt-3 pa-3 subtitle-2 font-weight-reguler"
+      class="pa-3 text-center subtitle-2 font-weight-reguler"
       :style="{ color: $vuetify.theme.themes[theme].text }"
     >
       {{ about.desc }}
+    </span>
+    <span
+      class="pa-3 text-center subtitle-2 font-weight-reguler"
+      :style="{ color: $vuetify.theme.themes[theme].text }"
+    >
+      {{ about.copyright }}
     </span>
   </v-layout>
 </template>
@@ -28,7 +34,9 @@ export default {
     return {
       about: {
         title: "About Sekolahku ID",
-        desc: "Sekolahku ID adalah aplikasi blablabla"
+        desc:
+          "Sekolahku ID adalah aplikasi yang memberikan data-data sekolah yang ada di Indonesia",
+        copyright: "Develop by: Satya wikananda :)"
       }
     };
   },
