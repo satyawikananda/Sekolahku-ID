@@ -1,8 +1,8 @@
 <template>
   <v-bottom-navigation :value="activeBtn" color="primary" grow fixed>
     <v-btn to="/favorite">
-      <span>Favorit</span>
-      <v-icon>mdi-heart</v-icon>
+      <span>Pin</span>
+      <v-icon>mdi-pin</v-icon>
     </v-btn>
 
     <v-btn to="/">
