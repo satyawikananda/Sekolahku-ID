@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation :value="activeBtn" color="primary" grow fixed>
+  <v-bottom-navigation :value="activeBtn" color="text" grow fixed>
     <v-btn to="/favorite">
       <span>Pin</span>
       <v-icon>mdi-pin</v-icon>

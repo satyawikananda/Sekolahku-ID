@@ -17,7 +17,8 @@
       </template>
     </v-img>
     <h3
-      class="red--text text--darken-2 text-center mt-3 pa-3 title font-weight-reguler"
+      class="text-center mt-3 pa-3 title font-weight-reguler"
+      :style="{ color: $vuetify.theme.themes[theme].text }"
     >
       {{ home.title }}
     </h3>
@@ -46,6 +47,11 @@ export default {
       },
       isLoading: false
     };
+  },
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    }
   }
 };
 </script>

@@ -1,14 +1,16 @@
 <template>
   <v-container grid-list-xl>
     <h3
-      class="red--text text--darken-2 text-center mt-3 pa-3 title font-weight-reguler"
+      class="text-center mt-3 pa-3 title font-weight-reguler"
+      :style="{ color: $vuetify.theme.themes[theme].text }"
     >
       Pilih wilayah
     </h3>
     <v-layout row justify-space-between>
       <v-flex md4 mx-auto>
         <p
-          class="red--text text--darken-2 text-center pb-2 subtile-1 font-weight-reguler"
+          class="text-center pb-2 subtile-1 font-weight-reguler"
+          :style="{ color: $vuetify.theme.themes[theme].text }"
         >
           Wilayah yang dicari
         </p>
@@ -26,7 +28,8 @@
       </v-flex>
       <v-flex md4 mx-auto>
         <p
-          class="red--text text--darken-2 text-center pb-2 subtile-1 font-weight-reguler"
+          class="text-center pb-2 subtile-1 font-weight-reguler"
+          :style="{ color: $vuetify.theme.themes[theme].text }"
         >
           Tingkatan sekolah
         </p>
@@ -58,7 +61,8 @@
       <v-layout row justify-space-between>
         <v-flex md8 mx-auto>
           <h3
-            class="red--text text--darken-2 text-center mb-3 pa-3 title font-weight-reguler"
+            class="text-center pb-2 subtile-1 font-weight-reguler"
+            :style="{ color: $vuetify.theme.themes[theme].text }"
           >
             Data tidak di temukan
           </h3>
@@ -103,6 +107,11 @@ export default {
   components: {
     loading,
     sekolah
+  },
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    }
   }
 };
 </script>

@@ -8,12 +8,14 @@
       transition="scale-transition"
     />
     <h3
-      class="red--text text--darken-2 text-center mt-3 pa-3 title font-weight-reguler"
+      class="text-center mt-3 pa-3 title font-weight-reguler"
+      :style="{ color: $vuetify.theme.themes[theme].text }"
     >
       {{ about.title }}
     </h3>
     <span
-      class="red--text text--darken-2 mt-3 pa-3 subtitle-2 font-weight-reguler"
+      class="mt-3 pa-3 subtitle-2 font-weight-reguler"
+      :style="{ color: $vuetify.theme.themes[theme].text }"
     >
       {{ about.desc }}
     </span>
@@ -29,6 +31,11 @@ export default {
         desc: "Sekolahku ID adalah aplikasi blablabla"
       }
     };
+  },
+  computed: {
+    theme() {
+      return this.$vuetify.theme.dark ? "dark" : "light";
+    }
   }
 };
 </script>
