@@ -1,31 +1,35 @@
 <template>
-  <v-layout column align-center justify-center class="ma-5 pb-5">
-    <v-img
-      alt="Sekolah ku logo"
-      class="shrink mt-5 hero-img"
-      contain
-      src="../../assets/images/undraw_back_to_school_inwc.svg"
-      transition="scale-transition"
-    />
-    <h3
-      class="text-center mt-3 pa-3 title font-weight-reguler"
-      :style="{ color: $vuetify.theme.themes[theme].text }"
-    >
-      {{ about.title }}
-    </h3>
-    <span
-      class="pa-3 text-center subtitle-2 font-weight-reguler"
-      :style="{ color: $vuetify.theme.themes[theme].text }"
-    >
-      {{ about.desc }}
-    </span>
-    <span
-      class="pa-3 text-center subtitle-2 font-weight-reguler"
-      :style="{ color: $vuetify.theme.themes[theme].text }"
-    >
-      {{ about.copyright }}
-    </span>
-  </v-layout>
+  <v-container grid-list-lg>
+    <v-layout row justify-space-between>
+      <v-flex md5 class="mt-8" mx-auto>
+        <v-img
+          alt="Sekolah ku logo"
+          class="shrink mx-auto hero-img"
+          contain
+          src="../../assets/images/undraw_back_to_school_inwc.svg"
+          transition="scale-transition"
+        />
+        <h3
+          class="text-center pa-3 title font-weight-reguler"
+          :style="{ color: $vuetify.theme.themes[theme].text }"
+        >
+          {{ about.title }}
+        </h3>
+        <p
+          class="text-center subtitle-2 font-weight-reguler"
+          :style="{ color: $vuetify.theme.themes[theme].text }"
+        >
+          {{ about.desc }}
+        </p>
+        <p
+          class="text-center subtitle-2 font-weight-reguler"
+          :style="{ color: $vuetify.theme.themes[theme].text }"
+        >
+          {{ about.copyright }}
+        </p>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 <script>
 export default {
