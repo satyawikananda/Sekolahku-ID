@@ -5,7 +5,7 @@
       rotate="10"
       size="120"
       width="5"
-      color="secondary"
+      color="text"
       class="pa-3"
     >
       {{ loading }}
