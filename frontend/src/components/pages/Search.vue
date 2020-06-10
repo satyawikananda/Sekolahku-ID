@@ -73,18 +73,96 @@
       <v-flex md8 mx-auto>
         <v-expansion-panels focusable>
           <v-expansion-panel v-for="(data, index) in data" :key="index">
-            <sekolah
-              :sekolah="data.sekolah"
-              :npsn="data.npsn"
-              :bentuk="data.bentuk"
-              :status="data.status === 'N' ? 'Negeri' : 'Swasta'"
-              :alamat="data.alamat_jalan"
-              :provinsi="data.propinsi"
-              :kab="data.kabupaten_kota"
-              :kec="data.kecamatan"
-              :lat="data.lintang"
-              :lng="data.bujur"
-            />
+            <v-expansion-panel-header>{{
+              data.sekolah
+            }}</v-expansion-panel-header>
+            <v-expansion-panel-content>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>NPSN</v-list-item-title>
+                  <v-list-item-subtitle>{{ data.npsn }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Bentuk sekolah</v-list-item-title>
+                  <v-list-item-subtitle>{{ data.bentuk }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Status sekolah</v-list-item-title>
+                  <v-list-item-subtitle>{{
+                    data.status === "N" ? "Negeri" : "Swasta"
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Alamat sekolah</v-list-item-title>
+                  <v-list-item-subtitle>{{
+                    data.alamat_jalan
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Provinsi sekolah</v-list-item-title>
+                  <v-list-item-subtitle>{{
+                    data.propinsi
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Kabupaten sekolah</v-list-item-title>
+                  <v-list-item-subtitle>{{
+                    data.kabupaten_kota
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Kecamatan sekolah</v-list-item-title>
+                  <v-list-item-subtitle>{{
+                    data.kecamatan
+                  }}</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-btn
+                color="secondary"
+                class="ma-2 white--text"
+                @click="
+                  pinSekolah(
+                    data.sekolah,
+                    data.npsn,
+                    data.bentuk,
+                    data.status,
+                    data.alamat_jalan,
+                    data.propinsi,
+                    data.kabupaten_kota,
+                    data.kecamatan
+                  )
+                "
+              >
+                Pin
+                <v-icon right dark>mdi-pin</v-icon>
+              </v-btn>
+              <v-btn
+                color="secondary"
+                class="ma-2 white--text"
+                :href="
+                  'https://www.google.com/maps/search/?api=1&query=' +
+                    data.lintang +
+                    ',' +
+                    data.bujur
+                "
+                :title="data.sekolah"
+              >
+                Cari alamat
+                <v-icon right dark>mdi-map</v-icon>
+              </v-btn>
+            </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
       </v-flex>
@@ -94,7 +172,7 @@
 <script>
 import { getWilayah } from "@/mixins/getWilayah.js";
 import { getSekolah } from "@/mixins/getSekolah.js";
-import sekolah from "@/components/data/Data.vue";
+// import sekolah from "@/components/data/Data.vue";
 import loading from "@/components/loading/Loading.vue";
 export default {
   name: "Sekolah",
@@ -105,8 +183,8 @@ export default {
     };
   },
   components: {
-    loading,
-    sekolah
+    loading
+    // sekolah
   },
   computed: {
     theme() {
