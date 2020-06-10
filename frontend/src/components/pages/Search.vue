@@ -130,6 +130,7 @@
                 </v-list-item-content>
               </v-list-item>
               <v-btn
+                disabled
                 color="secondary"
                 class="ma-2 white--text"
                 @click="
