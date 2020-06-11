@@ -150,6 +150,7 @@
                 <v-icon right dark>mdi-pin</v-icon>
               </v-btn>
               <v-btn
+                target="blank"
                 color="secondary"
                 class="ma-2 white--text"
                 :href="
