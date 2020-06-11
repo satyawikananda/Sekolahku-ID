@@ -6,7 +6,7 @@
           alt="Sekolah ku logo"
           class="shrink mx-auto hero-img"
           contain
-          src="../../assets/images/undraw_back_to_school_inwc.svg"
+          src="../assets/images/undraw_back_to_school_inwc.svg"
           transition="scale-transition"
         >
           <template v-slot:placeholder>
