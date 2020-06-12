@@ -14,7 +14,7 @@
 [![Sekolahku-id](https://raw.githubusercontent.com/satyawikananda/Sekolahku-ID/master/screenshot/photo_2020-06-11_00-07-18.jpg?token=AH44ZFCNQOTXTER5ZAQMCAC65JCDO)]
 
 ## Source data
-For the data, i took it from [https://data.go.id](https://data.go.id/dataset/museum-indonesia). But, because i want to learn typescript, i fetch the data and made a server and also i've been deployed to vercel now [API Sekolahku-ID](https://api-sekolahku.now.sh) 😁
+For the data, i took it from [https://data.go.id](https://data.go.id/dataset/museum-indonesia). But, because i want to learn typescript, i fetch the data and made a server and also i've been deployed to vercel now [API Sekolahku-ID](https://api-sekolahku.satyawikananda.now.sh/) 😁
 
 ## Technology used
 + Vue.js
