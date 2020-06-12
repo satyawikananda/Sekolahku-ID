@@ -71,8 +71,31 @@
     </div>
     <v-layout row justify-space-between v-else>
       <v-flex md8 mx-auto>
+        <v-text-field
+          placeholder="Cari sekolah"
+          solo
+          v-model="searchSchool"
+        ></v-text-field>
+      </v-flex>
+      <v-flex md8 mx-auto>
+        <div v-if="filteredList.length == 0">
+          <p
+            class="text-left pb-2 subtile-1 font-weight-reguler"
+            :style="{ color: $vuetify.theme.themes[theme].text }"
+          >
+            Tidak adanya data sekolah yang ditemukan
+          </p>
+        </div>
+        <div v-else>
+          <p
+            class="text-left pb-2 subtile-1 font-weight-reguler"
+            :style="{ color: $vuetify.theme.themes[theme].text }"
+          >
+            Terdapat {{ filteredList.length }} data sekolah yang ditemukan
+          </p>
+        </div>
         <v-expansion-panels focusable>
-          <v-expansion-panel v-for="(data, index) in data" :key="index">
+          <v-expansion-panel v-for="(data, index) in filteredList" :key="index">
             <v-expansion-panel-header>{{
               data.sekolah
             }}</v-expansion-panel-header>
@@ -181,7 +204,8 @@ export default {
   mixins: [getWilayah, getSekolah],
   data() {
     return {
-      bentuk: ["SD", "SMP", "SMA", "SMK"]
+      bentuk: ["SD", "SMP", "SMA", "SMK"],
+      searchSchool: ""
     };
   },
   components: {

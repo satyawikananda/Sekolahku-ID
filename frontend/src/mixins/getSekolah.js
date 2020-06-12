@@ -22,10 +22,20 @@ export const getSekolah = {
         });
         this.data = data.data;
         this.isLoading = false;
+        return this.data;
       } catch (err) {
         this.isLoading = false;
         throw new err();
       }
+    }
+  },
+  computed: {
+    filteredList() {
+      return this.data.filter(data => {
+        return data.sekolah
+          .toLowerCase()
+          .includes(this.searchSchool.toLowerCase());
+      });
     }
   }
 };
