@@ -11,7 +11,8 @@ app.use(cors())
 
 app.get("/", (req, res): void => {
     res.json({
-        msg: "Hello world"
+        wilayah: "https://api-sekolahku.now.sh/api/wilayah",
+        sekolahPerDaerah: "https://api-sekolahku.now.sh/api/sekolah?kodeWilayah=[kode_wilayah]&bentuk=[sd,smp,sma,smk]"
     })
 })
 
