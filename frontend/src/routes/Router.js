@@ -9,27 +9,32 @@ export default new Router({
     {
       path: "/",
       name: "Homepage",
-      component: () => import("@/pages/Home.vue")
+      component: () => import("@/pages/Home.vue"),
+      meta: { transitionName: "slide" }
     },
     {
       path: "/about",
       name: "About",
-      component: () => import("@/pages/About.vue")
+      component: () => import("@/pages/About.vue"),
+      meta: { transitionName: "slide" }
     },
     {
       path: "/favorite",
       name: "Favorite",
-      component: () => import("@/pages/Favorite.vue")
+      component: () => import("@/pages/Favorite.vue"),
+      meta: { transitionName: "slide" }
     },
     {
       path: "/search/sekolah",
       name: "Search",
-      component: () => import("@/pages/Search.vue")
+      component: () => import("@/pages/Search.vue"),
+      meta: { transitionName: "slide" }
     },
     {
       path: "/setting",
       name: "Setting",
-      component: () => import("@/pages/Setting.vue")
+      component: () => import("@/pages/Setting.vue"),
+      meta: { transitionName: "slide" }
     }
   ]
 });
