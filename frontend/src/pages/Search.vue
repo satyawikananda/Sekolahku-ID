@@ -14,7 +14,7 @@
         >
           Wilayah yang dicari
         </p>
-        <v-select
+        <v-autocomplete
           menu-props="auto"
           label="Pilih wilayah"
           solo
@@ -23,8 +23,9 @@
           :items="wilayah"
           item-value="kode_wilayah"
           item-text="nama"
+          :cache-items="true"
           v-model="kode_wilayah"
-        ></v-select>
+        ></v-autocomplete>
       </v-flex>
       <v-flex md4 mx-auto>
         <p
