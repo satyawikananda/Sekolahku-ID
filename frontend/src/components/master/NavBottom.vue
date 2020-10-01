@@ -1,9 +1,9 @@
 <template>
   <v-bottom-navigation app :value="activeBtn" color="text" grow fixed>
-    <v-btn to="/favorite">
+    <!-- <v-btn to="/favorite">
       <span>Pin</span>
       <v-icon>mdi-pin</v-icon>
-    </v-btn>
+    </v-btn> -->
 
     <v-btn to="/">
       <span>Beranda</span>

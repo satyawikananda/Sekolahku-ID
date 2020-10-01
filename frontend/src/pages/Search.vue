@@ -153,7 +153,7 @@
                   }}</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
-              <v-btn
+              <!-- <v-btn
                 disabled
                 color="secondary"
                 class="ma-2 white--text"
@@ -172,7 +172,7 @@
               >
                 Pin
                 <v-icon right dark>mdi-pin</v-icon>
-              </v-btn>
+              </v-btn> -->
               <v-btn
                 target="blank"
                 color="secondary"
